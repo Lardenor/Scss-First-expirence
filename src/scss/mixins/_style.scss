@@ -1,0 +1,16 @@
+@mixin span_style ($size, $style, $weight, $color,$line-hei) {
+    font-size: $size;
+    font-style: $style ;
+    font-weight: $weight ;
+    color: $color;
+    font-family: 'Open Sans', sans-serif;
+    line-height: $line-hei;
+}
+@mixin h1_style ($size,$style,$weight,$color,$line-hei){
+    font-size: $size;
+        font-style: $style ;
+        font-weight: $weight ;
+        color: $color;
+     font-family: 'DM Serif Display', serif;
+    line-height:$line-hei;
+}

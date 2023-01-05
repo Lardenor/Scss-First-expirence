@@ -1,0 +1,97 @@
+@media screen and (min-width: 768px) {
+  body {
+    overflow-y: scroll;
+  }
+
+  .board {
+    @include board-box(400px, 318px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Background 00000000000000000000000000000
+  .backgr {
+    @include bg_box(168px, 318px);
+
+    div {
+      @include bg_box_item(120px, 120px);
+    }
+  }
+
+  //
+  //
+  //
+  //
+  .text_block_container {
+    @include text_container(232px, 100%);
+  }
+  .text_block {
+    @include text_box_size(200px, 270px);
+    // @include flex(column);
+  }
+
+  // todo MAIN TEXT ////////////////////////////////////////////
+
+//   .text_bl_head {
+//     @include flex(row);
+//     width: 100%;
+//   }
+
+  .text_bl_main {
+    
+    h1 {
+      margin: 0;
+      padding-bottom: 5px; 
+      @include h1_style(20px, normal, 400, #081f32, 25px);
+
+      .dot {
+        display: none;
+      }
+
+      .invis {
+        display: inline;
+
+        @include h1_style(20px, normal, 400, #081f32, 25px);
+      }
+    }
+
+    p {
+      display: inline;
+      .invis_2 {
+        display: none;
+      }
+      @include span_style(13px, normal, 400, #374a59, 19px);
+    }
+  }
+
+  .text_bl_footer {
+    @include flex(row);
+    width: 100%;
+  }
+  .footer_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer_img {
+    a {
+      &:nth-child(2) {
+        padding-left: 10px;
+      }
+    }
+  }
+  .logo {
+    width: 32px;
+  }
+
+  a {
+    text-decoration: none;
+    @include span_style(11px, normal, 600, #007ae9, 15px);
+    &:hover {
+      color: #5187b9;
+    }
+    &:active {
+      transform: scale(90%);
+    }
+  }
+}

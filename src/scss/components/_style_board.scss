@@ -1,0 +1,74 @@
+
+
+.board {
+  @include board-box (128px,400px);
+  display: flex;
+  span {
+    @include span_style(11px, normal, 600, #6e798c,15px);
+  }
+  overflow: hidden;
+}
+// Background 00000000000000000000000000000
+.backgr {
+  @include bg_box(128px, 128px);
+  div {
+    @include bg_box_item(80px, 80px);
+   
+  }
+}
+.backgr_1 {
+  background: $bg_1;
+}
+.backgr_2 {
+  background: $bg_2;
+}
+.backgr_3 {
+  background: $bg_3;
+}
+
+//
+//
+//
+//
+
+// ? text block_________________---
+.text_block_container {
+ @include text_container(128px,100%)
+  
+}
+.text_block {
+  @include text_box_size (77px,218px);
+  @include flex(column);
+}
+// todo MAIN TEXT ////////////////////////////////////////////
+
+.text_bl_head {
+  @include flex(row);
+  width: 100%;
+}
+
+.text_bl_main {
+  h1 {
+    @include h1_style(20px, normal, 400, #081f32,25px);
+    .dot {
+      @extend h1;
+    }
+    .invis {
+      display: none;
+    }
+  }
+
+  p {
+    display: none;
+  }
+}
+
+.text_bl_footer {
+  display: none;
+}
+
+@for $i from 1 through 3 {
+  .item_#{$i} {
+    background-image: url("../img/svg/#{$i}.svg");
+  }
+}

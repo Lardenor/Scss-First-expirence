@@ -1,0 +1,51 @@
+
+@mixin board-box($height,
+$width){
+      min-height: $height;
+      min-width:  $width;
+      border-radius: 16px;
+      background-color: #ffffff;
+}
+
+@mixin flex ($direction) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flex_text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@mixin bg_box($height,$width){
+height: $height;
+width: $width;
+min-width: 128px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+@mixin bg_box_item($height,
+$width){
+  height: $height;
+    width: $width;
+    background-position: center;
+      background-size: cover;
+}
+@mixin text_box_size ($height,
+$width){
+  height: $height;
+    width: $width;
+}
+
+
+@mixin text_container($height,
+$width){
+height: $height;
+width: $width;
+display: flex;
+align-items: center;
+justify-content: center;
+}
